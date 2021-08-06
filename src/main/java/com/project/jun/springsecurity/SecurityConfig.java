@@ -42,7 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.and()
 				.authorizeRequests()
 				.antMatchers("/postinfo/**").hasRole("USER")
-				.antMatchers("http://localhost:4333/#/login", "/login", "/userinfo/selectone_userinfo_byuserid").permitAll()
+				.antMatchers("/userinfo/selectone_userinfo_byuserid").permitAll()
 				.anyRequest().authenticated()
 				.and()
 				.cors()
