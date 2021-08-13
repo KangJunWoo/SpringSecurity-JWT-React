@@ -74,7 +74,6 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
 				.withClaim("username", userInfo.getUsername())
 				.sign(Algorithm.HMAC512("juns"));
 		System.out.println("===============jwt 생성 끝=============");
-		
 		response.addHeader("Authorization", "Bearer "+jwtToken);
 	}
 }
